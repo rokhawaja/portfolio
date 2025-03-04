@@ -35,8 +35,19 @@
             <a href="/portfolio/experience.html">Experience</a>
         </div>
         <div class="nav-right">
+            <div class="download-wrapper">
+                <button class="download-button">
+                    <i class="fas fa-download"></i>
+                </button>
+                <div class="download-dropdown">
+                    <a href="/portfolio/resume.pdf" download class="download-option">
+                        <i class="fas fa-file-pdf"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
             <div class="connect-wrapper">
-                <a class="connect-button">Connect</a>
+                <button class="connect-button">Connect</button>
                 <div class="connect-dropdown">
                     <a href="https://www.linkedin.com/in/ahmed-roshan/" target="_blank" class="connect-option">
                         <i class="fab fa-linkedin"></i>
@@ -54,6 +65,12 @@
             </div>
         </div>
     </nav>
+
+    <!-- Timeline Indicator -->
+    <div class="timeline-indicator" onclick="scrollToTimeline()">
+        <i class="fas fa-history icon"></i>
+        <span class="text">Work Timeline</span>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -210,6 +227,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             const nameDropdown = document.querySelector('.name-dropdown');
             const nameWrapper = document.querySelector('.name-wrapper');
+            const timelineIndicator = document.querySelector('.timeline-indicator');
+            const timelineSection = document.querySelector('#timeline');
+            const heroSection = document.querySelector('#home');
+            const connectButton = document.querySelector('.connect-button');
+
+            // Prevent connect button from navigating
+            connectButton.addEventListener('click', function(e) {
+                e.preventDefault();
+            });
 
             // Function to show dropdown
             function showDropdown() {
@@ -238,6 +264,28 @@
                     }
                 });
             });
+
+            // Timeline indicator visibility control
+            function checkTimelineIndicatorVisibility() {
+                const timelineBounds = timelineSection.getBoundingClientRect();
+                const heroBounds = heroSection.getBoundingClientRect();
+                
+                // Show indicator only when hero section is visible and timeline is below viewport
+                if (heroBounds.bottom > 0 && timelineBounds.top > window.innerHeight) {
+                    timelineIndicator.style.display = 'flex';
+                } else {
+                    timelineIndicator.style.display = 'none';
+                }
+            }
+
+            // Smooth scroll to timeline function
+            window.scrollToTimeline = function() {
+                timelineSection.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Check visibility on scroll and on page load
+            window.addEventListener('scroll', checkTimelineIndicatorVisibility);
+            checkTimelineIndicatorVisibility();
         });
     </script>
 </body>
