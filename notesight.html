@@ -3,48 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoteSight - Project Details</title>
-    <link rel="stylesheet" href="/portfolio/styles.css">
+    <title>NoteSight – Case Study | Ahmed Roshan</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <base href="/portfolio/">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-section">
             <div class="name-wrapper">
                 <span class="nav-brand">Ahmed Roshan</span>
-                <div class="name-dropdown">
-                    <div class="name-content">
-                        <h3>University of Virginia</h3>
-                        <p class="graduation">Expected Graduation: May 2026</p>
-                        <p class="major">Major: Computer Science & Economics</p>
-                        <div class="current-status">
-                            <p>Currently working at NoteSight as a Product Management & Development Intern for Spring.</p>
-                            <p>Open for Summer 2025 internships and full-time roles starting in 2026.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="nav-center">
-            <a href="/portfolio/projects.html">Projects</a>
-            <a href="/portfolio/index.html" class="home-icon" title="Home">
+            <a href="projects.html">Projects</a>
+            <a href="index.html" class="home-icon" title="Home">
                 <i class="fas fa-home"></i>
             </a>
-            <a href="/portfolio/experience.html">Experience</a>
+            <a href="experience.html">Experience</a>
         </div>
         <div class="nav-right">
-            <div class="download-wrapper">
-                <button class="download-button">
-                    <i class="fas fa-download"></i>
-                </button>
-                <div class="download-dropdown">
-                    <a href="/portfolio/resume.pdf" download class="download-option">
-                        <i class="fas fa-file-pdf"></i>
-                        Download Resume
-                    </a>
-                </div>
-            </div>
             <div class="connect-wrapper">
                 <button class="connect-button">Connect</button>
                 <div class="connect-dropdown">
@@ -62,60 +40,201 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </nav>
-
-    <div class="project-details">
-        <div class="project-header">
-            <h1>NoteSight</h1>
-            <div class="project-subtitle">AI-Powered Note-Taking & Study Assistant</div>
-        </div>
-
-        <div class="learnings-section work-in-progress">
-            <h2>Work in Progress</h2>
-            <div class="learnings-content">
-                <h3>Professor/Teacher Portal</h3>
-                <p>Empowering educators with AI-driven tools for lecture management and student engagement.</p>
-                
-                <div class="development-status">
-                    <h4>Features Under Development</h4>
-                    <div class="tech-tags">
-                        <span>Lecture Recording & Upload</span>
-                        <span>AI-Powered Summaries</span>
-                        <span>Flashcards & Exam Prep</span>
-                        <span>Q&A Portal</span>
-                        <span>LMS Integration</span>
-                    </div>
-
-                    <div class="feature-details">
-                        <ul>
-                            <li>Lecture Recording & Upload: A seamless way for professors to record or upload lecture videos/audio directly to the platform.</li>
-                            <li>AI-Powered Summaries: Automatic generation of structured summaries to enhance comprehension and note-taking.</li>
-                            <li>Flashcards & Exam Prep: AI-driven creation of flashcards and exam-style questions based on lecture content.</li>
-                            <li>Q&A Portal: An interactive Q&A system where students can ask questions and receive AI-supported responses based on past lectures.</li>
-                            <li>Integration with LMS: Future plans include compatibility with Learning Management Systems like Blackboard and Canvas.</li>
-                        </ul>
-                    </div>
-
-                    <h4>Research & Planning</h4>
-                    <p>We are conducting in-depth research and user testing to refine our approach. By collaborating with educators, we aim to:</p>
-                    <ul>
-                        <li>Identify key challenges in current lecture recording and content management tools.</li>
-                        <li>Ensure AI-generated study materials align with real-world teaching needs.</li>
-                        <li>Develop an intuitive, easy-to-use interface that enhances both teaching and learning experiences.</li>
-                    </ul>
-                    <p>Through pilot testing and continuous iteration, our goal is to create a professor portal that not only simplifies lecture management but also transforms passive lectures into interactive learning experiences.</p>
-
-                    <div class="status-note">
-                        This feature is currently in active development. Updates will be posted as significant milestones are reached.
-                    </div>
+            <div class="download-wrapper">
+                <a href="resume.pdf" download class="download-button" title="Download Resume">
+                    <i class="fas fa-download"></i>
+                </a>
+                <div class="download-dropdown">
+                    <a href="resume.pdf" download class="download-option">
+                        <i class="fas fa-file-pdf"></i> Download Resume
+                    </a>
                 </div>
             </div>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="resume.pdf" download>Download Resume</a>
+        <div class="mobile-nav-social">
+            <a href="https://www.linkedin.com/in/ahmed-roshan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:roshankhawajaa@gmail.com"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/rokhawaja" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <!-- Case Study Content -->
+    <div class="case-study">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+        <!-- Hero -->
+        <div class="case-study-hero">
+            <h1>NoteSight</h1>
+            <p class="subtitle">AI-Powered Attendance & Classroom Analytics</p>
+            <div class="case-study-meta">
+                <div class="case-study-meta-item">
+                    <span class="label">Role</span>
+                    <span class="value">Product Manager & Product Designer</span>
+                </div>
+                <div class="case-study-meta-item">
+                    <span class="label">Timeline</span>
+                    <span class="value">2024</span>
+                </div>
+                <div class="case-study-meta-item">
+                    <span class="label">Type</span>
+                    <span class="value">SaaS · EdTech · AI</span>
+                </div>
+                <div class="case-study-meta-item">
+                    <span class="label">Stack</span>
+                    <span class="value">ChatGPT · Claude 3.5 · v0 · Replit · Confluence · Figma</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <div class="case-study-section">
+            <h2>Overview</h2>
+            <p>
+                NoteSight is an AI-powered attendance and classroom analytics platform designed to help teachers 
+                and school administrators automate attendance tracking and gain visibility into student engagement 
+                and performance trends. The platform transforms a tedious manual process into a seamless, 
+                data-driven experience that empowers educators to make better decisions.
+            </p>
+        </div>
+
+        <!-- Problem -->
+        <div class="case-study-section">
+            <h2>The Problem</h2>
+            <p>
+                Manual attendance tracking was slow, error-prone, and produced no actionable data. Teachers spent 
+                valuable class time on administrative tasks, and administrators had no easy way to see attendance 
+                patterns across classes or correlate them with student performance. When a student started falling 
+                behind, there was no early warning system in place.
+            </p>
+            <ul>
+                <li>5–10 minutes of class time lost per session on manual attendance</li>
+                <li>No visibility into attendance trends or at-risk students</li>
+                <li>Error-prone paper-based or manual digital systems</li>
+                <li>No correlation between attendance patterns and academic performance</li>
+            </ul>
+        </div>
+
+        <!-- My Role -->
+        <div class="case-study-section">
+            <h2>My Role</h2>
+            <p>
+                As both Product Manager and Product Designer, I owned the end-to-end product experience from 
+                discovery through delivery.
+            </p>
+            <ul>
+                <li>Led product discovery through interviews with teachers, teaching assistants, and administrators</li>
+                <li>Conducted workflow mapping to understand existing attendance and reporting processes</li>
+                <li>Designed end-to-end user flows for taking attendance, viewing dashboards, and flagging at-risk students</li>
+                <li>Created low-fidelity wireframes through high-fidelity interactive prototypes</li>
+                <li>Wrote core product specs and collaborated closely with developers on implementation</li>
+                <li>Ran usability testing sessions and iterated based on educator feedback</li>
+            </ul>
+        </div>
+
+        <!-- Process -->
+        <div class="case-study-section">
+            <h2>Design Process</h2>
+
+            <h3>Research & Discovery</h3>
+            <p>
+                I started by interviewing 12+ educators across different school types to understand their daily workflows. 
+                Key insights included: teachers wanted attendance to take less than 30 seconds, administrators needed 
+                weekly trend reports without manual data compilation, and everyone wanted a system that worked equally 
+                well on desktop and tablet.
+            </p>
+
+            <h3>User Flows & Information Architecture</h3>
+            <p>
+                I mapped out the primary user journeys — from a teacher opening the app to mark attendance in under 
+                30 seconds, to an administrator reviewing weekly absence reports and identifying students who may need 
+                outreach. These flows informed the navigation structure and feature prioritization.
+            </p>
+
+            <h3>Wireframing & Prototyping</h3>
+            <p>
+                Starting with low-fidelity sketches and moving to interactive Figma prototypes, I designed the core 
+                experiences: the quick-capture attendance flow, the teacher dashboard, and the admin analytics view. 
+                Each iteration was tested with educators to validate usability.
+            </p>
+
+        </div>
+
+        <!-- Solution -->
+        <div class="case-study-section">
+            <h2>The Solution</h2>
+            <p>
+                The final product delivers three core experiences designed to work seamlessly across desktop and tablet:
+            </p>
+            <ul>
+                <li><strong>AI-assisted attendance capture:</strong> Recognition-based or quick checklist flows that reduce attendance to a few taps</li>
+                <li><strong>Real-time dashboards:</strong> Attendance trends, at-risk student flags, and classroom-level insights updated automatically</li>
+                <li><strong>Simple, responsive UX:</strong> Clean interface that works equally well on desktop for administrators and tablet for classroom use</li>
+            </ul>
+
+        </div>
+
+        <!-- Outcome / Impact -->
+        <div class="case-study-section">
+            <h2>Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="fas fa-clock"></i></div>
+                    <h4>Faster Attendance</h4>
+                    <p>Reduced time spent on attendance entry from 5–10 minutes to under 30 seconds per class</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="fas fa-eye"></i></div>
+                    <h4>Better Visibility</h4>
+                    <p>Increased visibility into student absentee patterns across classes and time periods</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h4>Earlier Intervention</h4>
+                    <p>Provided teachers with actionable insights to identify and reach out to at-risk students earlier</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learnings -->
+        <div class="case-study-section">
+            <h2>Key Learnings</h2>
+            <p>
+                Working on NoteSight reinforced the importance of designing for the real context of use. Teachers 
+                need tools that fit into the first 30 seconds of class, not tools that demand a separate workflow. 
+                By spending time in classrooms and watching how attendance actually happens, I was able to design 
+                flows that felt natural rather than imposed.
+            </p>
+            <p>
+                I also learned how crucial dashboard UX is when users have limited time to interpret data. Every 
+                chart, metric, and flag had to communicate its meaning instantly — because an administrator reviewing 
+                reports doesn't have time to figure out what a visualization means.
+            </p>
+        </div>
+
+        <div class="work-card-buttons" style="justify-content: center; margin-top: 40px;">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Ahmed Roshan. All rights reserved.</p>
+        <p>&copy; 2026 Ahmed Roshan. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>

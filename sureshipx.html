@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SureShipX – Case Study | Ahmed Roshan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-section">
+            <div class="name-wrapper">
+                <span class="nav-brand">Ahmed Roshan</span>
+            </div>
+        </div>
+        <div class="nav-center">
+            <a href="projects.html">Projects</a>
+            <a href="index.html" class="home-icon" title="Home">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="experience.html">Experience</a>
+        </div>
+        <div class="nav-right">
+            <div class="connect-wrapper">
+                <button class="connect-button">Connect</button>
+                <div class="connect-dropdown">
+                    <a href="https://www.linkedin.com/in/ahmed-roshan/" target="_blank" class="connect-option">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:roshankhawajaa@gmail.com" class="connect-option">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/rokhawaja" target="_blank" class="connect-option">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="tel:+15714271749" class="connect-option">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="download-wrapper">
+                <a href="resume.pdf" download class="download-button" title="Download Resume">
+                    <i class="fas fa-download"></i>
+                </a>
+                <div class="download-dropdown">
+                    <a href="resume.pdf" download class="download-option">
+                        <i class="fas fa-file-pdf"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="resume.pdf" download>Download Resume</a>
+        <div class="mobile-nav-social">
+            <a href="https://www.linkedin.com/in/ahmed-roshan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:roshankhawajaa@gmail.com"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/rokhawaja" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <!-- Case Study Content -->
+    <div class="case-study">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+        <!-- Hero -->
+        <div class="case-study-hero">
+            <h1>SureShipX</h1>
+            <p class="subtitle">AI-Powered Logistics & Fulfillment Platform</p>
+            <div class="case-study-meta">
+                <div class="case-study-meta-item">
+                    <span class="label">Role</span>
+                    <span class="value">Founder · Product Owner · UX Designer</span>
+                </div>
+                <div class="case-study-meta-item">
+                    <span class="label">Timeline</span>
+                    <span class="value">2024</span>
+                </div>
+                <div class="case-study-meta-item">
+                    <span class="label">Type</span>
+                    <span class="value">Logistics · E-Commerce · AI</span>
+                </div>
+                <div class="case-study-meta-item">
+                    <span class="label">Stack</span>
+                    <span class="value">React · Node.js · Python · SQL · Tailwind CSS · APIs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <div class="case-study-section">
+            <h2>Overview</h2>
+            <p>
+                SureShipX is a logistics and fulfillment platform used by e-commerce brands to manage shipments, 
+                tracking, and operations across markets. It integrates with couriers and ERPs to automate status 
+                updates, tracking notifications, and operational workflows — giving merchants a single source of 
+                truth for their entire logistics operation.
+            </p>
+            <p>
+                As Founder and Product Owner, I was responsible for the product vision, the UX of every 
+                customer-facing and internal interface, and the collaboration with engineers to bring it all to life.
+            </p>
+        </div>
+
+        <!-- Problem -->
+        <div class="case-study-section">
+            <h2>The Problem</h2>
+            <p>
+                E-commerce merchants juggle multiple courier integrations, inconsistent tracking updates, and 
+                fragmented tools that make it nearly impossible to maintain visibility over their shipments. 
+                The result: frustrated customers flooding support channels with "Where is my order?" queries, 
+                operational blind spots, and missed SLA commitments.
+            </p>
+            <ul>
+                <li>Merchants lacked a unified view of shipments across multiple courier partners</li>
+                <li>Tracking updates were delayed or inconsistent, causing customer anxiety</li>
+                <li>Support teams were overwhelmed with WISMO (Where Is My Order) tickets</li>
+                <li>Logistics teams had no efficient way to handle exceptions and errors at scale</li>
+            </ul>
+        </div>
+
+        <!-- Research -->
+        <div class="case-study-section">
+            <h2>Research & Discovery</h2>
+            <p>
+                I conducted in-depth interviews with e-commerce merchants, logistics managers, and support teams 
+                to understand the end-to-end fulfillment experience. Key findings shaped the product direction:
+            </p>
+            <ul>
+                <li>Merchants needed real-time shipment visibility with clear exception handling</li>
+                <li>Customer-facing tracking pages needed to be branded and informative to reduce support load</li>
+                <li>Logistics operators needed scan-based workflows that minimize manual data entry</li>
+                <li>The biggest pain point was not knowing about problems until the customer complained</li>
+            </ul>
+        </div>
+
+        <!-- UX Process -->
+        <div class="case-study-section">
+            <h2>UX Process</h2>
+
+            <h3>Information Architecture & User Flows</h3>
+            <p>
+                I mapped out the workflows for three primary user types: merchants managing orders, logistics operators 
+                processing shipments, and end customers tracking packages. Each flow was designed to surface the most 
+                critical information first and reduce clicks to common actions.
+            </p>
+
+            <h3>Wireframing & Iteration</h3>
+            <p>
+                I designed wireframes for the shipment tracking dashboard, order management views, customer tracking 
+                pages, and operational scan-based flows. Each was iterated based on merchant feedback and operational 
+                constraints discovered during pilot testing.
+            </p>
+
+
+            <h3>Key UX & Product Contributions</h3>
+            <ul>
+                <li><strong>Shipment tracking dashboard</strong> with clear status indicators and exception flags</li>
+                <li><strong>Order management view</strong> with filters, bulk actions, and SLA indicators</li>
+                <li><strong>Customer tracking page</strong> designs that reduce support queries by providing proactive updates</li>
+                <li><strong>Operational workflows</strong> for logistics teams including scan-based flows and error handling</li>
+            </ul>
+
+        </div>
+
+        <!-- Final Designs -->
+        <div class="case-study-section">
+            <h2>Final Designs</h2>
+            <p>
+                The production designs deliver a clean, data-dense interface that balances information density with 
+                clarity. The merchant dashboard surfaces shipment status at a glance, while drill-down views provide 
+                the detail needed for exception handling. The customer-facing tracking page was designed to be branded, 
+                mobile-first, and informative enough to preempt support tickets.
+            </p>
+
+            <div class="case-study-feature-img">
+                <img src="images/sureshipimages/image1.jpg" alt="SureShipX Login Interface">
+            </div>
+
+            <div class="case-study-feature-img">
+                <img src="images/sureshipimages/image2.jpg" alt="SureShipX Shipment Dashboard">
+            </div>
+
+            <div class="case-study-feature-img">
+                <img src="images/sureshipimages/image3.jpg" alt="SureShipX Agent Management">
+            </div>
+        </div>
+
+        <!-- Impact -->
+        <div class="case-study-section">
+            <h2>Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>7-Figure Revenue</h4>
+                    <p>Helped scale the platform to 7-figure revenue through product-led growth</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="fas fa-users"></i></div>
+                    <h4>300%+ Retention</h4>
+                    <p>Achieved a 300%+ returning customer rate through strong product experience</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="fas fa-headset"></i></div>
+                    <h4>Reduced WISMO</h4>
+                    <p>Significantly reduced "Where is my order?" support tickets through proactive tracking UX</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learnings -->
+        <div class="case-study-section">
+            <h2>Key Learnings</h2>
+            <p>
+                Building SureShipX taught me that in logistics, the most impactful UX work often happens in the 
+                exception paths — not the happy paths. When a shipment is on track, the interface barely needs to 
+                exist. But when something goes wrong, the design needs to surface the problem, explain it clearly, 
+                and make resolution effortless.
+            </p>
+            <p>
+                I also learned the importance of designing for operational speed. Warehouse teams and logistics 
+                operators don't have time for complex interfaces — every extra click costs real money at scale. 
+                This drove me to design scan-based flows and keyboard-first interactions that minimize friction.
+            </p>
+        </div>
+
+        <div class="work-card-buttons" style="justify-content: center; margin-top: 40px;">
+            <a href="https://www.sureshipx.com" target="_blank" class="btn">
+                <i class="fas fa-external-link-alt"></i> Visit Website
+            </a>
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ahmed Roshan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

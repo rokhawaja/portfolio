@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Ahmed Roshan</title>
-    <link rel="stylesheet" href="/portfolio/styles.css">
+    <title>Projects – Ahmed Roshan</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <base href="/portfolio/">
 </head>
 <body>
     <!-- Navigation -->
@@ -14,38 +13,16 @@
         <div class="nav-section">
             <div class="name-wrapper">
                 <span class="nav-brand">Ahmed Roshan</span>
-                <div class="name-dropdown">
-                    <div class="name-content">
-                        <h3>University of Virginia</h3>
-                        <p class="graduation">Expected Graduation: May 2026</p>
-                        <p class="major">Major: Computer Science & Economics</p>
-                        <div class="current-status">
-                            <p>Currently working at NoteSight as a Product Management & Development Intern for Spring.</p>
-                            <p>Open for Summer 2025 internships and full-time roles starting in 2026.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="nav-center">
-            <a href="/portfolio/projects.html">Projects</a>
-            <a href="/portfolio/index.html" class="home-icon" title="Home">
+            <a href="projects.html">Projects</a>
+            <a href="index.html" class="home-icon" title="Home">
                 <i class="fas fa-home"></i>
             </a>
-            <a href="/portfolio/experience.html">Experience</a>
+            <a href="experience.html">Experience</a>
         </div>
         <div class="nav-right">
-            <div class="download-wrapper">
-                <button class="download-button">
-                    <i class="fas fa-download"></i>
-                </button>
-                <div class="download-dropdown">
-                    <a href="/portfolio/resume.pdf" download class="download-option">
-                        <i class="fas fa-file-pdf"></i>
-                        Download Resume
-                    </a>
-                </div>
-            </div>
             <div class="connect-wrapper">
                 <button class="connect-button">Connect</button>
                 <div class="connect-dropdown">
@@ -63,14 +40,134 @@
                     </a>
                 </div>
             </div>
+            <div class="download-wrapper">
+                <a href="resume.pdf" download class="download-button" title="Download Resume">
+                    <i class="fas fa-download"></i>
+                </a>
+                <div class="download-dropdown">
+                    <a href="resume.pdf" download class="download-option">
+                        <i class="fas fa-file-pdf"></i> Download Resume
+                    </a>
+                </div>
+            </div>
         </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="resume.pdf" download>Download Resume</a>
+        <div class="mobile-nav-social">
+            <a href="https://www.linkedin.com/in/ahmed-roshan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:roshankhawajaa@gmail.com"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/rokhawaja" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
 
     <!-- Projects Section -->
     <section class="projects-page">
         <h1 class="page-title">Projects</h1>
-        
-        <!-- Someslight Project -->
+
+        <!-- SureShipX -->
+        <div class="project-item project-text-focus">
+            <div class="project-content">
+                <h2>SureShipX</h2>
+                <h3 class="project-role">Founder · Product Owner · UX Designer</h3>
+                <p class="project-description">
+                    Logistics and fulfillment platform used by e-commerce brands to manage shipments, tracking, 
+                    and operations across markets with courier and ERP integrations.
+                </p>
+                <div class="project-highlights">
+                    <h4>Key Highlights</h4>
+                    <ul>
+                        <li>Defined product vision, core workflows, and system architecture</li>
+                        <li>Designed all customer-facing interfaces and internal dashboards</li>
+                        <li>Helped scale to 7-figure revenue with strong product-led growth</li>
+                        <li>Achieved 300%+ returning customer rate through excellent UX</li>
+                        <li>Reduced "Where is my order?" support tickets significantly</li>
+                    </ul>
+                </div>
+                <div class="project-tech-stack">
+                    <h4>Skills & Tools</h4>
+                    <div class="tech-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Tailwind CSS</span>
+                        <span>UI/UX</span>
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>API Integration</span>
+                        <span>Figma</span>
+                        <span>Cursor</span>
+                        <span>Claude 3.5 Sonnet</span>
+                    </div>
+                </div>
+                <div class="project-links-center">
+                    <a href="https://www.sureshipx.com" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Website
+                    </a>
+                    <a href="sureshipx.html" class="project-link">
+                        <i class="fas fa-book-open"></i>
+                        View Case Study
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Retenda -->
+        <div class="project-item project-text-focus">
+            <div class="project-content">
+                <h2>Retenda</h2>
+                <h3 class="project-role">Product Manager & UX Lead</h3>
+                <p class="project-description">
+                    AI-driven engagement and retention tool helping digital products increase user engagement 
+                    through intelligent reminders, journeys, and feedback loops.
+                </p>
+                <div class="project-highlights">
+                    <h4>Key Highlights</h4>
+                    <ul>
+                        <li>Defined feature set, user journeys, and personas for the product</li>
+                        <li>Designed onboarding flows, retention dashboards, and insights pages</li>
+                        <li>Created campaign builder with preview and conditional scheduling UX</li>
+                        <li>Improved clarity of retention strategy for early customers</li>
+                    </ul>
+                </div>
+                <div class="project-tech-stack">
+                    <h4>Skills & Tools</h4>
+                    <div class="tech-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Tailwind CSS</span>
+                        <span>UI/UX</span>
+                        <span>Figma</span>
+                        <span>ChatGPT-4o</span>
+                        <span>Gemini Advanced</span>
+                        <span>Product Analytics</span>
+                        <span>Data Visualization</span>
+                    </div>
+                </div>
+                <div class="project-links-center">
+                    <a href="https://www.retenda.co" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Website
+                    </a>
+                    <a href="retenda.html" class="project-link">
+                        <i class="fas fa-book-open"></i>
+                        View Case Study
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Someslight -->
         <div class="project-item project-text-focus">
             <div class="project-content">
                 <h2>Someslight</h2>
@@ -83,27 +180,25 @@
                 <div class="project-highlights">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Developed a cohesive brand identity and product line.</li>
-                        <li>Implemented SEO strategies, boosting organic traffic by 60% year-over-year.</li>
-                        <li>Led multiple A/B testing campaigns to refine landing pages and increase conversions.</li>
-                        <li>Managed successful influencer marketing collaborations, driving consistent online sales growth.</li>
-                        <li>Analyzed market data and user feedback to optimize product design and marketing tactics.</li>
+                        <li>Developed a cohesive brand identity and product line</li>
+                        <li>Implemented SEO strategies, boosting organic traffic by 60% year-over-year</li>
+                        <li>Led multiple A/B testing campaigns to refine landing pages and increase conversions</li>
+                        <li>Managed successful influencer marketing collaborations, driving consistent online sales growth</li>
+                        <li>Analyzed market data and user feedback to optimize product design and marketing tactics</li>
                     </ul>
                 </div>
                 <div class="project-tech-stack">
                     <h4>Skills & Tools</h4>
                     <div class="tech-tags">
+                        <span>Shopify API</span>
                         <span>SEO</span>
                         <span>A/B Testing</span>
-                        <span>Product Design</span>
-                        <span>Influencer Marketing</span>
-                        <span>Data Analytics</span>
-                        <span>E-commerce Strategy</span>
-                        <span>Google Analytics</span>
-                        <span>Shopify</span>
+                        <span>Product Analytics</span>
                         <span>Figma</span>
-                        <span>Python</span>
-                        <span>AWS</span>
+                        <span>JavaScript</span>
+                        <span>E-commerce Strategy</span>
+                        <span>Data Analytics</span>
+                        <span>Tableau</span>
                     </div>
                 </div>
                 <div class="project-links-center">
@@ -117,7 +212,9 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Ahmed Roshan. All rights reserved.</p>
+        <p>&copy; 2026 Ahmed Roshan. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>

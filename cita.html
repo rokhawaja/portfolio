@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CITA Marketplace - Ahmed Roshan</title>
-    <link rel="stylesheet" href="/portfolio/styles.css">
+    <title>Cita Marketplace – Case Study | Ahmed Roshan</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <base href="/portfolio/">
 </head>
 <body>
     <!-- Navigation -->
@@ -14,38 +13,16 @@
         <div class="nav-section">
             <div class="name-wrapper">
                 <span class="nav-brand">Ahmed Roshan</span>
-                <div class="name-dropdown">
-                    <div class="name-content">
-                        <h3>University of Virginia</h3>
-                        <p class="graduation">Expected Graduation: May 2026</p>
-                        <p class="major">Major: Computer Science & Economics</p>
-                        <div class="current-status">
-                            <p>Currently working at NoteSight as a Product Management & Development Intern for Spring.</p>
-                            <p>Open for Summer 2025 internships and full-time roles starting in 2026.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="nav-center">
-            <a href="/portfolio/projects.html">Projects</a>
-            <a href="/portfolio/index.html" class="home-icon" title="Home">
+            <a href="projects.html">Projects</a>
+            <a href="index.html" class="home-icon" title="Home">
                 <i class="fas fa-home"></i>
             </a>
-            <a href="/portfolio/experience.html">Experience</a>
+            <a href="experience.html">Experience</a>
         </div>
         <div class="nav-right">
-            <div class="download-wrapper">
-                <button class="download-button">
-                    <i class="fas fa-download"></i>
-                </button>
-                <div class="download-dropdown">
-                    <a href="/portfolio/resume.pdf" download class="download-option">
-                        <i class="fas fa-file-pdf"></i>
-                        Download Resume
-                    </a>
-                </div>
-            </div>
             <div class="connect-wrapper">
                 <button class="connect-button">Connect</button>
                 <div class="connect-dropdown">
@@ -63,8 +40,36 @@
                     </a>
                 </div>
             </div>
+            <div class="download-wrapper">
+                <a href="resume.pdf" download class="download-button" title="Download Resume">
+                    <i class="fas fa-download"></i>
+                </a>
+                <div class="download-dropdown">
+                    <a href="resume.pdf" download class="download-option">
+                        <i class="fas fa-file-pdf"></i> Download Resume
+                    </a>
+                </div>
+            </div>
         </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="resume.pdf" download>Download Resume</a>
+        <div class="mobile-nav-social">
+            <a href="https://www.linkedin.com/in/ahmed-roshan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:roshankhawajaa@gmail.com"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/rokhawaja" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
 
     <!-- Project Details -->
     <section class="project-details">
@@ -76,7 +81,7 @@
         <!-- Feature Sections -->
         <div class="feature-section">
             <div class="feature-image">
-                <img src="/portfolio/images/citaimages/image1.jpg" alt="CITA Homepage Design">
+                <img src="images/citaimages/image1.jpg" alt="CITA Homepage Design">
             </div>
             <div class="feature-content">
                 <h2>Advanced Search & Booking System</h2>
@@ -102,7 +107,7 @@
                 </div>
             </div>
             <div class="feature-image">
-                <img src="/portfolio/images/citaimages/image2.jpg" alt="Search Interface">
+                <img src="images/citaimages/image2.jpg" alt="Search Interface">
             </div>
         </div>
 
@@ -122,26 +127,27 @@
                     <div class="skills-column">
                         <h3>Key Skills & Methodologies</h3>
                         <ul class="skills-list">
-                            <li>A/B Testing & Data Analytics</li>
-                            <li>Market Research & User Interviews</li>
-                            <li>Product Strategy & Roadmapping</li>
-                            <li>Agile Development Methodologies</li>
-                            <li>UI/UX Design Principles</li>
-                            <li>Cross-functional Collaboration</li>
-                            <li>User Research & Testing</li>
-                            <li>Monetization Strategy</li>
+                            <li>A/B Testing & Experimentation</li>
+                            <li>Product Analytics & Data-Driven Decisions</li>
+                            <li>User Research & Persona Development</li>
+                            <li>Product Strategy & Roadmap Planning</li>
+                            <li>Agile / Scrum Methodologies</li>
+                            <li>UI/UX Design & Prototyping</li>
+                            <li>Cross-functional Collaboration (Eng, Design, DS)</li>
+                            <li>UAT & Validation Testing</li>
                         </ul>
                     </div>
                     <div class="skills-column">
                         <h3>Tools & Technologies</h3>
                         <ul class="tools-list">
-                            <li>Figma (Prototyping & Design)</li>
-                            <li>TypeScript & CSS</li>
-                            <li>SQL & Data Analytics</li>
-                            <li>Jira (Project Management)</li>
+                            <li>SQL & Analytics Workflows</li>
+                            <li>JavaScript, React, Node.js</li>
+                            <li>Python & Data Pipelines</li>
+                            <li>Figma (Prototyping & High-Fidelity Design)</li>
                             <li>Tableau (Data Visualization)</li>
+                            <li>Jira & Confluence</li>
                             <li>AWS & Docker</li>
-                            <li>Python & Java</li>
+                            <li>GitHub & Version Control</li>
                         </ul>
                     </div>
                 </div>
@@ -150,7 +156,9 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Ahmed Roshan. All rights reserved.</p>
+        <p>&copy; 2026 Ahmed Roshan. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>

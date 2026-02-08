@@ -1,95 +1,146 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+// =============================================
+// MOBILE MENU TOGGLE
+// =============================================
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', function () {
+            mobileToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileNav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                mobileToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
             });
-        }
-    });
-});
-
-// Navbar background change on scroll
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        });
     }
-});
 
-// Mobile menu toggle (you can expand this later)
-const createMobileMenu = () => {
-    const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelector('.nav-links');
-    
-    // Create hamburger button
-    const hamburger = document.createElement('button');
-    hamburger.className = 'mobile-menu-button';
-    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-    hamburger.style.display = 'none';
-    
-    // Add styles for mobile
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
-    const handleMobileChange = (e) => {
-        if (e.matches) {
-            hamburger.style.display = 'block';
-            navLinks.style.display = 'none';
-        } else {
-            hamburger.style.display = 'none';
-            navLinks.style.display = 'flex';
+    // =============================================
+    // CONNECT BUTTON (prevent default navigation)
+    // =============================================
+    const connectButton = document.querySelector('.connect-button');
+    if (connectButton) {
+        connectButton.addEventListener('click', function (e) {
+            e.preventDefault();
+        });
+    }
+
+    // =============================================
+    // FADE-IN ANIMATION ON SCROLL
+    // =============================================
+    const fadeElements = document.querySelectorAll('.fade-in');
+    if (fadeElements.length > 0) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const fadeObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(function (el) {
+            fadeObserver.observe(el);
+        });
+    }
+
+    // =============================================
+    // TIMELINE INDICATOR (only on index page)
+    // =============================================
+    const timelineIndicator = document.querySelector('.timeline-indicator');
+    const timelineSection = document.querySelector('#timeline');
+    const heroSection = document.querySelector('#home');
+
+    if (timelineIndicator && timelineSection && heroSection) {
+        function checkTimelineIndicatorVisibility() {
+            var timelineBounds = timelineSection.getBoundingClientRect();
+            var heroBounds = heroSection.getBoundingClientRect();
+
+            if (heroBounds.bottom > 0 && timelineBounds.top > window.innerHeight) {
+                timelineIndicator.style.display = 'flex';
+            } else {
+                timelineIndicator.style.display = 'none';
+            }
         }
-    };
-    
-    mediaQuery.addListener(handleMobileChange);
-    handleMobileChange(mediaQuery);
-    
-    // Toggle menu
-    hamburger.addEventListener('click', () => {
-        const isVisible = navLinks.style.display === 'flex';
-        navLinks.style.display = isVisible ? 'none' : 'flex';
-    });
-    
-    navbar.insertBefore(hamburger, navLinks);
-};
 
-// Initialize mobile menu
-createMobileMenu();
+        window.scrollToTimeline = function () {
+            timelineSection.scrollIntoView({ behavior: 'smooth' });
+        };
 
-// Add fade-in animation for sections
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
+        window.addEventListener('scroll', checkTimelineIndicatorVisibility);
+        checkTimelineIndicatorVisibility();
+    }
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+    // =============================================
+    // NAME DROPDOWN AUTO-SHOW (only on index page)
+    // =============================================
+    const nameDropdown = document.querySelector('.name-dropdown');
+    if (nameDropdown) {
+        function showDropdown() {
+            nameDropdown.style.opacity = '1';
+            nameDropdown.style.visibility = 'visible';
+            nameDropdown.style.transform = 'translateY(0)';
+
+            setTimeout(function () {
+                nameDropdown.style.opacity = '';
+                nameDropdown.style.visibility = '';
+                nameDropdown.style.transform = '';
+            }, 2000);
         }
-    });
-}, observerOptions);
 
-// Apply animation to sections
-document.querySelectorAll('.section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'all 0.6s ease-out';
-    observer.observe(section);
-});
+        // Only auto-show on index page
+        if (
+            window.location.pathname.endsWith('index.html') ||
+            window.location.pathname.endsWith('/') ||
+            window.location.pathname.endsWith('/portfolio/') ||
+            window.location.pathname.endsWith('/portfolio')
+        ) {
+            showDropdown();
+        }
 
-// Add image lightbox functionality
-const images = document.querySelectorAll('.project-images img');
-images.forEach(img => {
-    img.addEventListener('click', () => {
-        // Implement lightbox here
+        // Show when clicking home icon
+        document.querySelectorAll('a[href="index.html"]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                if (
+                    window.location.pathname.endsWith('index.html') ||
+                    window.location.pathname.endsWith('/')
+                ) {
+                    e.preventDefault();
+                    showDropdown();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+    }
+
+    // =============================================
+    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // =============================================
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
+
 });
